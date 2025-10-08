@@ -39,6 +39,10 @@ Additional features I'd like to add later:
 
 [ ] decorations (pixel stars in the background, confetti when all the games have been played)
 
+Resolve bugs:
+
+[ ] update list of games that have been played after removing one from the hub (this causes incorrect stats)
+
 # Turborepo starter
 
 This Turborepo starter is maintained by the Turborepo core team.

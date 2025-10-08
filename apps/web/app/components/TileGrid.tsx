@@ -5,6 +5,7 @@ import { PlusIcon } from "@radix-ui/react-icons";
 import GameTile from "./GameTile";
 import GameModal from "./GameModal";
 import GameStatsModal from "./GameStatsModal";
+import DailyResetTimer from "./dailyResetTimer";
 import { useLocalStorageState } from "../utils/useLocalStorageState";
 import { useLocalGameHistory } from "../utils/useLocalGameHistory";
 
@@ -32,6 +33,8 @@ export default function TileGrid() {
     setEditGame(null);
   };
 
+  //todo: also remove the game from history
+  //maybe make a modal to confirm deletion?
   const deleteGame = (id: number) => {
     setGames(games.filter((g) => g.id !== id));
   };
@@ -46,6 +49,9 @@ export default function TileGrid() {
           </span>{" "}
           games today!
         </p>
+      </div>
+      <div className="font-league-spartan text-white text-xl font-extralight mb-2 flex justify-center items-center gap-2">
+        <DailyResetTimer />
       </div>
       <div className="flex justify-center items-center gap-2 py-2">
         <button
