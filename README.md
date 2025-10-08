@@ -1,4 +1,5 @@
 # Zenith
+
 ## _Your web game hub that allows you to personalize it to your needs and track progress of the games that you've played._
 
 Core features to-do list:
@@ -33,7 +34,6 @@ Additional features I'd like to add later:
 [ ] player stats for each game: times played
 
 [ ] decorations (pixel stars in the background, confetti when all the games have been played)
-
 
 # Turborepo starter
 

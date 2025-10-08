@@ -29,7 +29,7 @@ export default function GameModal({ mode, onSubmit, onClose, initialValues }: Pr
     if (!url.trim()) newErrors.url = "URL cannot be empty.";
     else {
       try {
-        const normalizedUrl = url.match(/^https?:\/\//) ? url : `http://${url}`;
+        const normalizedUrl = /^https?:\/\/.+\..+/.test(url) ? url : `http://${url}`;
         new URL(normalizedUrl);
       } catch {
         newErrors.url = "Please enter a valid link (e.g., https://supercoolgame.com).";
@@ -51,7 +51,7 @@ export default function GameModal({ mode, onSubmit, onClose, initialValues }: Pr
 
   return (
     <>
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded shadow-md w-80 flex flex-col space-y-3">
         <h2 className="font-bold text-lg">
           {mode === "add" ? "Add a game" : "Edit game"}
