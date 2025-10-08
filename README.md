@@ -10,6 +10,7 @@ Core features to-do list:
 [ ] daily counter of the games that were played until the midnight reset
 [ ] a footer with credits and a way to display the help/greeting pop-up
 [x] style add/manage buttons and edit/remove buttons
+[ ] initialize the hub with sample games for a new user
 
 Additional features I'd like to add later:
 [ ] unsplash image browser integrated with adding/editing the game
