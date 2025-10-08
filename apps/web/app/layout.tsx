@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { League_Spartan } from "next/font/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,6 +16,12 @@ const megrim = localFont({
   variable: "--font-megrim",
 });
 
+const leagueSpartan = League_Spartan({
+  subsets: ["latin"],
+  variable: "--font-league-spartan",
+  weight: ["200", "400", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Zenith",
   description: "Your personalized webgame hub",
@@ -27,7 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${megrim.variable} min-h-screen bg-gradient-to-br from-[#110345] to-[#6744C0]`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${megrim.variable} ${leagueSpartan.variable} min-h-screen`}
+      >
         {children}
       </body>
     </html>
