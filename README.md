@@ -1,4 +1,10 @@
+
 # Zenith
+
+<p align="center">
+  <img width="600" alt="logo" src="https://github.com/user-attachments/assets/e2ba820a-f4d1-4f3f-b5fa-90d14257d7fd" />
+</p>
+
 ## _Your web game hub that allows you to personalize it to your needs and track progress of the games that you've played._
 
 Core features to-do list:
