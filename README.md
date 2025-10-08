@@ -2,22 +2,36 @@
 ## _Your web game hub that allows you to personalize it to your needs and track progress of the games that you've played._
 
 Core features to-do list:
+
 [ ] cookie-based pop-up greeting that explains how the website works
+
 [x] a working, responsive tile grid
+
 [x] adding a new grid item
+
 [x] edit mode (edit/remove a tile)
+
 [ ] grey out a played game until the midnight reset
+
 [ ] daily counter of the games that were played until the midnight reset
+
 [ ] a footer with credits and a way to display the help/greeting pop-up
+
 [x] style add/manage buttons and edit/remove buttons
 [ ] initialize the hub with sample games for a new user
 
 Additional features I'd like to add later:
+
 [ ] unsplash image browser integrated with adding/editing the game
+
 [ ] correctly displayed unsplash image with blur and overlay for readability
+
 [ ] google login that synces game tiles and stats (with an option to choose current state or saved state (or data merging?))
+
 [ ] login/logout/user info in header
+
 [ ] player stats for each game: times played
+
 [ ] decorations (pixel stars in the background, confetti when all the games have been played)
 
 
