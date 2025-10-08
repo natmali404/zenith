@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Game {
+  id          Int           @id @default(autoincrement())
+  userId      Int
+  gameUrl     String
+  name        String
+  User        User          @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  GameHistory GameHistory[]
+
+  @@unique([userId, name])
+}
+
+model GameHistory {
+  id     Int      @id @default(autoincrement())
+  userId Int
+  gameId Int
+  date   DateTime @db.Date
+  played Boolean  @default(false)
+  won    Boolean  @default(false)
+  Game   Game     @relation(fields: [gameId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  User   User     @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([userId, gameId, date])
+}
+
+model User {
+  id          Int           @id @default(autoincrement())
+  googleId    String?       @unique
+  email       String?       @unique
+  name        String?
+  avatarUrl   String?
+  createdAt   DateTime?     @default(now()) @db.Timestamp(6)
+  Game        Game[]
+  GameHistory GameHistory[]
+}
